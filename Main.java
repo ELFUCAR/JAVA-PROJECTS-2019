@@ -1,56 +1,64 @@
- //DERS ÖRNEKLERİ 
-package pkg14052019example1;
-
+//DERS ÖRNEKLER DEVAMI-1
+package pkg14052019example2;
 public class Main {
 
-    public static void main(String []args){
+    public static void main(String[] args) {
         
- //------FIRST EXAMPLE-------
-      String s11 = "tutorialspoint";
-      String s2 = "tutorialspoint";
-      String s3 = new String ("Tutorials Point");
-      System.out.println(s11==(s2));
-      System.out.println(s2.equals(s3));
+//--------FIRST EXAMPLE---------
+     String word1 = "wtorek";
+      String word2 = "wtorek";
       
-//-------SECOND EXAMPLE--------      
-      String str = "Hello World Hello World";
-      System.out.println( str.replace( 'H','W' ) );
-      System.out.println( str.replaceFirst("He", "Wa") );
-      System.out.println( str.replaceAll("He", "Ha") ); 
+      String s="Todat is wtorek.Tomorrow is sroda.";
+      System.out.println(s);
+                
       
-//-------THİRD EXAMPLE----------
-       
-      String s = "Elif Uçar";
-      String s1= s.substring(0,2)+s.substring(5,7);
+      
+      int i1=s.indexOf(word1);
+      int i2=s.indexOf(word2);
     
-      System.out.println(s+"--->"+s1);
-    
-      System.out.println(s.substring(0,2));
-      System.out.println(s.substring(5,7));
-      
-      //  System.out.println( removeCharAt( str,3 ) );
-    //  System.out.println( removeCharAt( str,2) );
-    //  System.out.println( removeCharAt( "ELİF",3 ) );
-      //}
-     
-     // public static String removeCharAt(String s,int pos){
-        //  return s.substring(0,pos)+s.substring(pos+1);
-    
-///---------FOURTH EXAMPLE------
-    
-      
-      String word = "İstanbul";
-      String strOrig="This city is called İstanbul.It is a big city";
-      
-      int intindex=strOrig.indexOf("İstanbul");
 
-        if(intindex==-1)
-            {
-                System.out.println(word +"Not Found");
+    if(i1==-1)
+    {
+         System.out.println(word1 +"Not Found");
+                }
+        else{   
+                System.out.println("Found "+ word1 +" at index "+i1);
             }
-            else{
-             System.out.println("Found "+word+" at index "+intindex);
-}
+
+    
+    System.out.println("-----------");
+    
+  //---------SECOND EXAMPLE-----------
   
+        String word11 = "wtorek";
+      String word22 = "wtorek";
+      String word33="Tuesday";
+ 
+      
+      String ss="Today is wtorek.Tomorrow is sroda.";
+      System.out.println(ss);
+  
+      int i11=ss.indexOf(word11);
+      int i22=ss.indexOf(word22);
+      
+    if(i11==-1||i22==-1)
+    {
+         System.out.println(word11 +"Not Found");
+                }
+        else{   
+            
+                System.out.println(ss.replace(word11,word33));
+        }
+ //-----------THIRD EXAMPLE------------------
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    
    }
+
 }
+
