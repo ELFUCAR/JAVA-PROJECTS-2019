@@ -1,64 +1,50 @@
-//DERS ÖRNEKLER DEVAMI-1
-package pkg14052019example2;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package pkg17052019examples1;
+import java.util.Arrays;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String args[]) throws Exception {
         
-//--------FIRST EXAMPLE---------
-     String word1 = "wtorek";
-      String word2 = "wtorek";
-      
-      String s="Todat is wtorek.Tomorrow is sroda.";
-      System.out.println(s);
-                
+        
+  //--------FIRST EXAMPLE----------------
+      int array[] = { 2, 5, -2,2, 6, -3, 8, 0, -7, -9, 4 };
+      Arrays.sort(array);
+      printArray("Sorted array", array);
       
       
-      int i1=s.indexOf(word1);
-      int i2=s.indexOf(word2);
-    
-
-    if(i1==-1)
-    {
-         System.out.println(word1 +"Not Found");
-                }
-        else{   
-                System.out.println("Found "+ word1 +" at index "+i1);
-            }
-
-    
-    System.out.println("-----------");
-    
-  //---------SECOND EXAMPLE-----------
-  
-        String word11 = "wtorek";
-      String word22 = "wtorek";
-      String word33="Tuesday";
- 
+      int looking = 2;
+      int index = Arrays.binarySearch(array, looking);
       
-      String ss="Today is wtorek.Tomorrow is sroda.";
-      System.out.println(ss);
-  
-      int i11=ss.indexOf(word11);
-      int i22=ss.indexOf(word22);
-      
-    if(i11==-1||i22==-1)
-    {
-         System.out.println(word11 +"Not Found");
-                }
-        else{   
-            
-                System.out.println(ss.replace(word11,word33));
-        }
- //-----------THIRD EXAMPLE------------------
- 
- 
- 
- 
- 
- 
- 
-    
+      if (index<0){
+          
+          System.out.println(looking+" not found");
+     }
+     else{
+       System.out.println("Found "+looking+" at position " + index);
+     }
    }
-
+   private static void printArray(String message, int array[]) {
+      System.out.println(message + ": [length: " + array.length + "]");
+      
+      for (int i = 0; i < array.length; i++) {
+         if(i != 0) {
+            System.out.print(", ");
+         }
+         System.out.print(array[i]);                     
+      }
+      System.out.println();
+      
+    //--------SECOND EXAMPLE--------------- 
+      
+      
+      
+      
+      
+      
+   }
 }
-
